@@ -1,124 +1,45 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="comprador-home">
-    <div class="hero">
-        <h1>👋 ¡Bienvenido, Comprador!</h1>
-        <p>Explora productos únicos hechos a mano por artesanos locales. Tu vitrina personalizada empieza aquí.</p>
-        <a href="{% url 'compradores:catalog' %}" class="btn-hero">Ver Catálogo</a>
+<div class="container" style="max-width: 900px; margin: auto; padding: 40px 20px;">
+    
+    <div style="text-align: center; margin-bottom: 40px;">
+        <h1 style="font-size: 2.4rem; margin-bottom: 10px;">Bienvenido, Comprador 🛒</h1>
+        <p style="font-size: 1.2rem; color: #555;">
+            Explora productos únicos creados por artesanos locales.
+        </p>
     </div>
 
-    <div class="features">
-        <div class="feature-card">
-            <h3>⭐ Favoritos</h3>
-            <p>Guarda los productos que te llamen la atención para revisarlos más tarde.</p>
-            <a href="{% url 'compradores:favorites' %}" class="feature-link">Ver favoritos →</a>
-        </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">
+        
+        <a href="#" style="text-decoration: none; color: inherit;">
+            <div style="padding: 20px; border-radius: 10px; background: #fafafa; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                <h3>🛍️ Ver Productos</h3>
+                <p>Encuentra artesanías y productos especiales hechos a mano.</p>
+            </div>
+        </a>
 
-        <div class="feature-card">
-            <h3>🔔 Notificaciones</h3>
-            <p>Mantente al día con actualizaciones de productos, ofertas y novedades.</p>
-            <a href="{% url 'compradores:notifications' %}" class="feature-link">Notificaciones →</a>
-        </div>
+        <a href="#" style="text-decoration: none; color: inherit;">
+            <div style="padding: 20px; border-radius: 10px; background: #fafafa; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                <h3>⭐ Favoritos</h3>
+                <p>Guarda tus productos preferidos para verlos luego.</p>
+            </div>
+        </a>
 
-        <div class="feature-card">
-            <h3>🛍️ Tus pedidos</h3>
-            <p>Revisa el estado de tus compras y accede rápidamente a los detalles.</p>
-            <a href="#" class="feature-link">Próximamente →</a>
-        </div>
+        <a href="#" style="text-decoration: none; color: inherit;">
+            <div style="padding: 20px; border-radius: 10px; background: #fafafa; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                <h3>📦 Mis Compras</h3>
+                <p>Revisa tu historial de compras y pedidos anteriores.</p>
+            </div>
+        </a>
 
-        <div class="feature-card">
-            <h3>📦 Política de devoluciones</h3>
-            <p>Infórmate sobre cómo funcionan los cambios y devoluciones.</p>
-            <a href="{% url 'compradores:returns' %}" class="feature-link">Ver política →</a>
-        </div>
+        <a href="#" style="text-decoration: none; color: inherit;">
+            <div style="padding: 20px; border-radius: 10px; background: #fafafa; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                <h3>⚙️ Ajustes</h3>
+                <p>Configura tu perfil de comprador.</p>
+            </div>
+        </a>
+
     </div>
 </div>
-
-<style>
-    .comprador-home {
-        width: 100%;
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 30px 20px;
-    }
-
-    .hero {
-        background: linear-gradient(135deg, #4facfe, #00f2fe);
-        color: white;
-        padding: 40px;
-        border-radius: 16px;
-        text-align: center;
-        margin-bottom: 40px;
-        box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
-    }
-
-    .hero h1 {
-        font-size: 2.3rem;
-        margin-bottom: 10px;
-    }
-
-    .hero p {
-        font-size: 1.1rem;
-        opacity: 0.95;
-        margin-bottom: 20px;
-    }
-
-    .btn-hero {
-        display: inline-block;
-        padding: 12px 22px;
-        background: #fff;
-        color: #0078ff;
-        font-weight: bold;
-        border-radius: 10px;
-        text-decoration: none;
-        transition: 0.2s ease;
-    }
-
-    .btn-hero:hover {
-        background: #e6f0ff;
-        transform: translateY(-2px);
-    }
-
-    .features {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        gap: 20px;
-    }
-
-    .feature-card {
-        background: #ffffff;
-        border-radius: 12px;
-        padding: 20px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-        transition: 0.2s ease;
-    }
-
-    .feature-card:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 5px 12px rgba(0,0,0,0.12);
-    }
-
-    .feature-card h3 {
-        margin-bottom: 10px;
-        font-size: 1.2rem;
-        color: #333;
-    }
-
-    .feature-card p {
-        color: #555;
-        font-size: 0.95rem;
-        margin-bottom: 12px;
-    }
-
-    .feature-link {
-        color: #0078ff;
-        font-weight: bold;
-        text-decoration: none;
-    }
-
-    .feature-link:hover {
-        text-decoration: underline;
-    }
-</style>
 {% endblock %}

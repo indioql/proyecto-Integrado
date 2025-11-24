@@ -9,21 +9,25 @@
       <div class="fav-item">
         <a href="{% url 'compradores:product_detail' f.product.pk %}">
           <div class="fav-thumb">
-            {% if f.product.image %}<img src="{{ f.product.image.url }}" alt="{{ f.product.title }}">{% else %}
+            {% if f.product.imagen %}
+              <img src="{{ f.product.imagen.url }}" alt="{{ f.product.nombre }}">
+            {% else %}
               <div class="placeholder small">Sin imagen</div>
             {% endif %}
           </div>
+
           <div class="fav-info">
-            <h3>{{ f.product.title }}</h3>
+            <h3>{{ f.product.nombre }}</h3>
+
             <p class="meta">
-              {% if f.product.category %}
-                {{ f.product.category.name }}
+              {% if f.product.categoria %}
+                {{ f.product.categoria.nombre }}
               {% else %}
                 Sin categoría
               {% endif %}
-              • {{ f.product.location }}
             </p>
-            <strong>${{ f.product.price }}</strong>
+
+            <strong>${{ f.product.precio }}</strong>
           </div>
         </a>
 
@@ -37,7 +41,10 @@
     {% endfor %}
   </div>
 {% else %}
-  <p>No tienes favoritos aún. Anda al <a href="{% url 'compradores:catalog' %}">catálogo</a> y guarda tus productos preferidos.</p>
+  <p>No tienes favoritos aún. Anda al 
+     <a href="{% url 'compradores:catalog' %}">catálogo</a> 
+     y guarda tus productos preferidos.
+  </p>
 {% endif %}
 
 {% endblock %}
